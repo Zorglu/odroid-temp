@@ -1,0 +1,34 @@
+{
+  "name": "odroid-temp",
+  "version": "0.0.1",
+  "description": "Read the temp sensor on Odroid",
+  "homepage": "https://github.com/Zorglu/odroid-temp",
+  "main": "lib/oddroid-temp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zorglu/odroid-temp"
+  },
+  "keywords": [
+    "odroid",
+    "TEMP",
+    "sensor",
+    "js",
+    "node"
+  ],
+  "author": "Zorglu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zorglu/odroid-temp/issues"
+  },
+  "dependencies": {
+    "eventemitter": "^0.3.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
