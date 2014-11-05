@@ -1,6 +1,6 @@
 {
   "name": "odroid-temp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Read the temp sensor on Odroid",
   "homepage": "https://github.com/Zorglu/odroid-temp",
   "main": "lib/oddroid-temp.js",

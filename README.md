@@ -12,20 +12,35 @@ A single small module to easily read the temperature sensor on Odroid
     
 ## API
 
-* `var temp = new Temp();` Create a new instance of odroid-temp.
-
-* `temp.read` to read the temperature
 ```javascript
-  temp.read(function(err, value){
-	console.log("temp.read", err, value);
-  });
-```
 
-* `temp.on` to catch event from temperature sensor
-```javascript
-  temp.on('change', function(value){
+var Temp = require("./lib/odroid-temp.js");
+
+// Create new instance on Temp object
+var tempCelcius = new Temp();
+
+//Create new instance on Temp object with parameters
+var tempFarenheiht = new Temp("f");
+
+// Get temperature
+tempCelcius.read(function(err, value) {
+	if (err !== null) {
+		console.log("Temperature read error", err);
+	} else {
+		console.log("Temperature %d °C", value);
+	}
+});
+
+// watch for temperature celcius change
+tempCelcius.on("change", function(value) {
 	console.log("Temperature %d °C", value);
-  });
+});
+
+//watch for temperature fareineiht change
+tempFarenheiht.on("change", function(value) {
+	console.log("Temperature %d °F", value);
+});
+
 ```
 
 Ref : http://odroid.us/mediawiki/index.php?title=Temperature_Checking
